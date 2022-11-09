@@ -11,7 +11,6 @@ load_dotenv()
 
 apikey = os.environ['apikey']
 url = os.environ['url']
-
 authenticator=IAMAuthenticator('232551oT2a_QD0K0DzBxT610mMn5IJgnSHxk10l1WsOv')
 language_translator= LanguageTranslatorV3(
     version='2018_05_01',
