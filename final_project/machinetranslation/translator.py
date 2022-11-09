@@ -26,20 +26,20 @@ def english_to_french(english_text):
     """
     This function translates text from English to French and returns the French text
     """
-    translation = language_translator.translate(
+    frenchtranslation = language_translator.translate(
         text=english_text,
-        model_id="en-fr").get_result()
-    french_text=french_translation['translation'][0]['translation']
-    return french_text
+        model_id="en-fr"
+        ).get_result()
+    return frenchtranslation.get("translations")[0].get["translation"]
+    
 
- #translating to English
+#translating to English
 def french_to_english(french_text):
     #write the code here
     """
     This function translates text from French to English and returns the English text
     """
-    english_translation=language_translator.translate(
+    englishtranslation=language_translator.translate(
         text=french_text,
         model_id="fr-en").get_result()
-    english_text=english_translation['translation'][0]['translation']
-    return english_text
+    return englishtranslation.get("translations")[0].get["translation"]
